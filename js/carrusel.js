@@ -11,6 +11,3 @@ function mostrarImagen(indiceNuevo) {
 
 prevBtn.addEventListener('click', () => mostrarImagen(indice - 1));
 nextBtn.addEventListener('click', () => mostrarImagen(indice + 1));
-
-// Opcional: Carrusel automático
-setInterval(() => mostrarImagen(indice + 1), 4000);
