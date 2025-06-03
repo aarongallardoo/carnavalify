@@ -193,6 +193,7 @@
     }
 }
 
+
 /* FINAL DEL CARRUSEL */
 
 /* SECCIÓN DE HISTORIA */
@@ -204,9 +205,8 @@
     width: 100%;
     font-family: 'Verdana', sans-serif;
     color: var(--secundario);
-    margin-left: 80px;
-    margin-right: 80px;
     font-size: 1.8rem;
+    text-align: center;
 }
 
 .texto_historia_inicio {
@@ -266,3 +266,96 @@
     }
 }
 
+body {
+    overflow-x: hidden;
+}
+
+/* AGRUPACIONES DESTACADAS */
+
+.agrupaciones-legendarias {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.agrupaciones-legendarias h2 {
+    color: var(--secundario);
+    font-family: 'Verdana', sans-serif;
+    margin-bottom: 32px;
+    font-size: 2rem;
+}
+
+.agrupaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.agrupacion-tarjeta {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 0 0 18px 0;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agrupacion-tarjeta:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.agrupacion-tarjeta img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.info-agrupacion {
+    padding: 12px 8px 0 8px;
+}
+
+.nombre-agrupacion {
+    font-family: 'Verdana', sans-serif;
+    color: var(--primario);
+    font-weight: bold;
+    margin: 8px 0 2px 0;
+    font-size: 1.1rem;
+}
+
+.autor-agrupacion {
+    font-family: 'Verdana', sans-serif;
+    color: var(--secundario);
+    margin: 0 0 2px 0;
+    font-size: 1rem;
+}
+
+.anio-agrupacion {
+    font-family: 'Verdana', sans-serif;
+    color: #888;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Responsive: 2 columnas en tablet, 1 en móvil */
+@media (max-width: 900px) {
+    .agrupaciones-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .agrupaciones-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .agrupaciones-legendarias h2 {
+        font-size: 1.3rem;
+    }
+}
